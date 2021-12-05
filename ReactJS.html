@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>React.JS</title>
+
+</head>
+<body>
+  <h2>OPEN <i>&nbsp;&nbsp;ReactES6.js&nbsp;&nbsp;</i> in react Folder</h2>
+  <h2>Open <i>&nbsp;&nbsp; index.html &nbsp;&nbsp;</i> in c:\Users\dell\my-react-app\public folder</h2>
+  <h2>Open <i>&nbsp;&nbsp; index.js &nbsp;&nbsp;</i> in c:\Users\dell\my-react-app\src folder</h2>
+  <h2><a href="https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=1784s">React Crash Course by Traversy Media</a></h2>
+
+
+	<h1>React Tutorial</h1>
+	<p>React is a JavaScript library for building user interfaces.<br>
+React is used to build single-page applications.<br>
+React allows us to create reusable UI components.</p>
+<p><h4> What is React?</h4>
+React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.<br>
+React is a tool for building UI components.<br><br>
+<h3> How does React Work?</h3>
+React creates a VIRTUAL DOM in memory.<br>
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.<br>
+React only changes what needs to be changed!<br>
+React finds out what changes have been made, and changes only what needs to be changed.<br>
+You will learn the various aspects of how React does this in the rest of this tutorial.<br><br>
+<h3> React.JS History</h3><br>
+Current version of React.JS is V17.0.2 (August 2021).<br>
+Initial Release to the Public (V0.3.0) was in July 2013.<br>
+React.JS was first used in 2011 for Facebook's Newsfeed feature.<br>
+Facebook Software Engineer, Jordan Walke, created it.<br>
+Current version of create-react-app is v4.0.3 (August 2021).<br>
+create-react-app includes built tools such as webpack, Babel, and ESLint.</p>
+
+<h2>React Getting Started</h2>
+<p>To use React in production, you need npm which is included with Node.js.<br><br>
+To get an overview of what React is, you can write React code directly in HTML.<br>
+But in order to use React in production, you need npm and Node.js installed.</p><br>
+<p><h3>React Directly in HTML</h3> 
+The quickest way start learning React is to write React directly in your HTML files.<br>
+Start by including three scripts, the first two let us write React code in our JavaScripts, and the third, Babel, allows us to write JSX syntax and ES6 in older browsers.</p>
+<strong>Include three CDN's in your HTML file:</strong>
+<pre>
+< html>
+  < head>
+    < script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin> </ script>
+    < script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></ script>
+    < script src="https://unpkg.com/@babel/standalone/babel.min.js"></ script>
+  < /head>
+< body>
+</pre>
+<p>This way of using React can be OK for testing purposes, but for production you will need to set up a React environment.</p>
+<h2>Setting up a React Environment</h2>
+<p>If you have npx and Node.js installed, you can create a React application by using <strong> create-react-app</strong>.<br><br>
+If you've previously installed <strong>create-react-app</strong> globally, it is recommended that you uninstall the package to ensure npx always uses the latest version of<strong> create-react-app</strong>.<br><br>
+To uninstall, run this command:<code> npm uninstall -g create-react-app</code>.<br><br>
+Run this command to create a React application named my-react-app:</p><br>
+<code>npx create-react-app my-react-app</code><br>
+<p>The create-react-app will set up everything you need to run a React application.</p>
+<h2>Run the React Application</h2>
+<p>Now you are ready to run your first real React application!<br>
+Run this command to move to the my-react-app directory:</p>
+<code>cd my-react-app</code>
+<p>Run this command to run the React application my-react-app:</p>
+<code>npm start</code>
+<p>A new browser window will pop up with your newly created React App! If not, open your browser and type localhost:3000 in the address bar.<br><br>
+The result:</p>
+<img src="screenshot_myfirstreact.png">
+<h4>Modify the React Application</h4>
+<p>So far so good, but how do I change the content?<br>
+Look in the my-react-app directory, and you will find a src folder. Inside the src folder there is a file called App.js, open it and it will look like this:</p>
+
+<p>What's Next?<br><br>
+Now you have a React Environment on your computer, and you are ready to learn more about React.<br>
+In the rest of this tutorial we will use our "Show React" tool to explain the various aspects of React, and how they are displayed in the browser.<br><br>
+If you want to follow the same steps on your computer, start by stripping down the<i> src </i>folder to only contain one file:<b> index.js</b>. You should also remove any unnecessary lines of code inside the<b> index.js</b> file to make them look like the example in the "Show React" tool below:</p>
+
+<h1>React ES6</h1>
+<p>ES6 stands for ECMAScript 6.<br>
+ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.</p>
+<p>Why Should I Learn ES6?<br>
+React uses ES6, and you should be familiar with some of the new features like:<br>
+<br>
+Classes<br>
+Arrow Functions<br>
+Variables (let, const, var)<br>
+Array Methods like .map()<br>
+Destructuring<br>
+Modules<br>
+Ternary Operator<br>
+Spread Operator</p>
+
+<p><h3> React ES6 Classes</h3>
+ES6 introduced classes.<br>
+A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+</p>
+<p id="1"></p>
+<p>Class Inheritance</p>
+<p id="2"></p>
+
+<h1>React ES6 Arrow Functions</h1>
+<p id="3"></p>
+<p id="4"></p>
+<p>What About this?<br><br>
+The handling of this is also different in arrow functions compared to regular functions.<br><br>
+In short, with arrow functions there are no binding of this.<br>
+In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.<br>
+With arrow functions, the this keyword always represents the object that defined the arrow function.<br><br>
+Let us take a look at two examples to understand the difference.<br>
+Both examples call a method twice, first when the page loads, and once again when the user clicks a button.<br><br>
+The first example uses a regular function, and the second example uses an arrow function.<br>
+The result shows that the first example returns two different objects (window and button), and the second example returns the Header object twice.</p>
+
+<h1>Regular Function</h1>
+<button id="btn">Click Me!</button>
+<p id="5"></p>
+
+<h1>Arrow Function</h1>
+<button id="btn1">Click Me!</button>
+<p id="6"></p>
+
+<h4>React ES6 Variables</h4>
+<p>Before ES6 there were only one way of defining your variables: with the var keyword. If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.<br>
+Now, with ES6, there are three ways of defining your variables: var, let, and const.</p>
+<p>If you use var outside of a function, it belongs to the global scope.<br>
+If you use var inside of a function, it belongs to that function.<br>
+If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.<br>
+var has a function scope, not a block scope.</p>
+
+<p>let is the block scoped version of var, and is limited to the block (or expression) where it is defined.<br>
+If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.<br>
+let has a block scope.</p>
+
+<p>const is a variable that once it has been created, its value can never change.<br>
+const has a block scope.</p>
+
+<h3>React ES6 Array Methods</h3>
+<p>There are many JavaScript array methods.<br>
+One of the most useful in React is the .map() array method.<br>
+The .map() method allows you to run a function on each item in the array, returning a new array as the result.<br>
+In React, map() can be used to generate lists.</p>
+
+<h3>React ES6 Destructuring</h3>
+<p>To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.<br>
+Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.<br>
+Destructuring makes it easy to extract only what is needed.</p>
+<h4>Destructing Arrays</h4>
+<p>Here is the new way of assigning array items to a variable:<br>
+With destructuring:</p>
+<pre>const vehicles = ['mustang', 'f-150', 'expedition'];
+
+const [car, truck, suv] = vehicles;
+</pre>
+<p>When destructuring arrays, the order that variables are declared is important.</p>
+<p>If we only want the car and suv we can simply leave out the truck but keep the comma:</p>
+<pre>const vehicles = ['mustang', 'f-150', 'expedition'];
+
+const [car,, suv] = vehicles;</pre>
+<p>Destructuring comes in handy when a function returns an array:</p>
+
+<p id="7"></p>
+
+<h5>Destructuring Objects</h5>
+
+<p>With destructuring:</p>
+<pre>function myVehicle({type, color, brand, model}) {
+  const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+}</pre>
+
+<p id="8"></p>
+<p>Notice that the object properties do not have to be declared in a specific order.</p>
+
+
+<p>We can even destructure deeply nested objects by referencing the nested object then using a colon and curly braces to again destructure the items needed from the nested object:</p>
+
+<p id="9"></p>
+
+<h2>React ES6 Spread Operator</h2>
+<p>The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.</p>
+<p id="10"></p>
+ 
+<p>The spread operator is often used in combination with destructuring.</p>
+
+<p id="11"></p>
+<p>We can use the spread operator with objects too:</p>
+
+<p id="12"></p>
+
+<p>Press F12 and see the result object in the console view.</p>
+<p>Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle. The resulting color is now yellow.</p>
+
+
+<h4>React ES6 Modules</h4>
+<p>JavaScript modules allow you to break up your code into separate files.<br>
+This makes it easier to maintain the code-base.<br>
+ES Modules rely on the import and export statements.<br><br>
+Export<br>
+You can export a function or variable from any file.<br>
+Let us create a file named person.js, and fill it with the things we want to export.<br>
+There are two types of exports: Named and Default.<br><br>
+Named Exports<br>
+You can create named exports two ways. In-line individually, or all at once at the bottom.</p>
+
+
+<h5>In-line individually:</h5>
+<i>person.js</i>
+<pre>
+export const name = "Jesse"
+export const age = "40"
+</pre>
+<h5>All at once at the bottom:</h5>
+<i>person.js</i>
+<pre>
+const name = "Jesse"
+const age = "40"
+
+export { name, age }
+</pre><br><br><br><br>
+<strong>Modules Not Worked<br>
+<a href="https://www.w3schools.com/react/react_es6_modules.asp">Modules</a>
+</strong><br><br><br><br>
+
+<h1>React Render HTML</h1>
+<p>React's goal is in many ways to render HTML in a web page.<br>
+React renders HTML to the web page by using a function called ReactDOM.render().</p><br>
+
+<h2>The Render Function</h2>
+<p>The ReactDOM.render() function takes two arguments, HTML code and an HTML element.<br><br>
+The purpose of the function is to display the specified HTML code inside the specified HTML element.<br><br>
+But render where?<br><br>
+There is another folder in the root directory of your React project, named "public". In this folder, there is an index.html file.<br><br>
+You'll notice a single < div> in the body of this file. This is where our React application will be rendered.</p>
+
+<img src="root.png">
+
+<p>The HTML Code<br>
+The HTML code in this tutorial uses JSX which allows you to write HTML tags inside the JavaScript code:</p>
+<i>Create a variable that contains HTML code and display it in the "root" node:</i>
+<p></p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>The Root Node<br>
+The root node is the HTML element where you want to display the result.<br>
+It is like a container for content managed by React.<br>
+It does NOT have to be a < div> element and it does NOT have to have the id='root':</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h2>React JSX</h2>
+<p>What is JSX?<br><br>
+JSX stands for JavaScript XML.<br>
+JSX allows us to write HTML in React.<br>
+JSX makes it easier to write and add HTML in React.<br><br>
+Coding JSX<br><br>
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.<br>
+JSX converts HTML tags into react elements.<br><br>
+You are not required to use JSX, but JSX makes it easier to write React applications.</p>
+
+<p>Here are two examples. The first uses JSX and the second does not:<br>
+Example 1<br>
+JSX:</p> 
+<strong>Go To Index.js and Execute in React App</strong>
+<p>Example 2<br>
+Without JSX:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h4>Expressions in JSX</h4>
+<p>With JSX you can write expressions inside curly braces { }.<br>
+The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Inserting a Large Block of HTML<br>
+To write HTML on multiple lines, put the HTML inside parentheses: <br>Create a list with three list items:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>One Top Level Element<br>
+The HTML code must be wrapped in ONE top level element.<br>
+So if you like to write two paragraphs, you must put them inside a parent element, like a div element.<br>Wrap two paragraphs inside one DIV element:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.<br><br><br>
+Alternatively, you can use a "fragment" to wrap multiple lines. This will prevent unnecessarily adding extra nodes to the DOM.<br>
+A fragment looks like an empty HTML tag: <></ >.<br>Wrap two paragraphs inside a fragment:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Elements Must be Closed<br>
+JSX follows XML rules, and therefore HTML elements must be properly closed.<br>Close empty elements with /></p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+
+<p>JSX will throw an error if the HTML is not properly closed.<br><br>
+Attribute class = className<br>
+The class attribute is a much used attribute in HTML, but since JSX is rendered as JavaScript, and the class keyword is a reserved word in JavaScript, you are not allowed to use it in JSX.<br><br>
+Use attribute className instead.<br>
+JSX solved this by using className instead. When JSX is rendered, it translates className attributes into class attributes.</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+
+<p>Conditions - if statements<br>
+React supports if statements, but not inside JSX.<br>
+To be able to use conditional statements in JSX, you should put the if statements outside of the JSX, or you could use a ternary expression instead:<br>
+Option 1:<br>
+Write if statements outside of the JSX code:</p>
+<p>Write "Hello" if x is less than 10, otherwise "Goodbye":</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+<p>Option 2:<br>
+Use ternary expressions instead:<br>
+Write "Hello" if x is less than 10, otherwise "Goodbye":</p>
+<strong>Go To Index.js and Execute in React App</strong>
+<p>Note that in order to embed a JavaScript expression inside JSX, the JavaScript must be wrapped with curly braces, {}.</p>
+
+<h2>React Components</h2>
+<p>Components are like functions that return HTML elements.<br><br>
+React Components<br>
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.<br>
+Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.<br><br>
+In older React code bases, you may find Class components primarily used. It is now suggested to use Function components along with Hooks, which were added in React 16.8. There is an optional section on Class components for your reference.<br><br>
+Create Your First Component<br>
+When creating a React component, the component's name MUST start with an upper case letter.<br><br>
+Class Component<br>
+A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.<br>
+The component also requires a render() method, this method returns HTML.</p>
+<img src="classcomponent.png">
+
+<p>Function Component<br>
+Here is the same example as above, but created using a Function component instead.<br>
+A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.</p>
+<img src="functioncomponent.png">
+
+<p>Rendering a Component<br>
+Now your React application has a component called Car, which returns an < h2> element.<br>
+To use this component in your application, use similar syntax as normal HTML: < Car /></p>
+<img src="renderAcomponent.png"><br><br>
+<strong>Go To Index.js and Execute in React App</strong>
+<p>Props<br>
+Components can be passed as props, which stands for properties.<br>
+Props are like function arguments, and you send them into the component as attributes.<br>
+You will learn more about props in the next chapter.</p>
+<p>Use an attribute to pass a color to the Car component, and use it in the render() function:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Components in Components<br>
+We can refer to components inside other components:</p>
+<p>Use the Car component inside the Garage component:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Components in Files<br>
+React is all about re-using code, and it is recommended to split your components into separate files.<br>
+To do that, create a new file with a .js file extension and put the code inside it:<br><br>
+Note that the filename must start with an uppercase character.</p>
+<p>This is the new file, we named it "Car.js":<br>
+To be able to use the Car component, you have to import the file in your application.<br><br>Now we import the "Car.js" file in the application, and we can use the Car component as if it was created here.</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h1>React Class Components</h1>
+<strong>I Didn't Learn This Topic beacuse Feel free to skip this section, and use Function Components instead.</strong>
+<a href="https://www.w3schools.com/react/react_class.asp">React Class Compnents</a>
+
+<h2>React Props</h2>
+<p>Props are arguments passed into React components.<br>
+Props are passed to components via HTML attributes.<br>
+props stands for properties.<br>
+React Props<br>
+React Props are like function arguments in JavaScript and attributes in HTML.<br>
+To send props into a component, use the same syntax as HTML attributes:</p>
+
+<p>Add a "brand" attribute to the Car element:<br>The component receives the argument as a props object:<br>
+Use the brand attribute in the component:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Pass Data<br>
+Props are also how you pass data from one component to another, as parameters.</p>
+<p>Send the "brand" property from the Garage component to the Car component:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+
+<p>If you have a variable to send, and not a string as in the example above, you just put the variable name inside curly brackets:<br>
+Create a variable named carName and send it to the Car component:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+<p>Or if it was an object:<br>
+Create an object named carInfo and send it to the Car component:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+<p>Note: React Props are read-only! You will get an error if you try to change their value.</p>
+
+<h2>React Events</h2>
+<p>Just like HTML DOM events, React can perform actions based on user events.<br>
+React has the same events as HTML: click, change, mouseover etc.<br><br>
+Adding Events<br>
+React events are written in camelCase syntax:<br>
+onClick instead of onclick.<br>
+React event handlers are written inside curly braces:<br>
+onClick={shoot}  instead of onClick="shoot()".</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Passing Arguments<br>
+To pass an argument to an event handler, use an arrow function.</p>
+<p>Send "Goal!" as a parameter to the shoot function, using arrow function:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>React Event Object<br>
+Event handlers have access to the React event that triggered the function.<br>
+In our example the event is the "click" event.</p>
+<p>Arrow Function: Sending the event object manually:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h2>React Conditional Rendering</h2>
+<p>In React, you can conditionally render components.<br>
+There are several ways to do this.<br><br>
+if Statement<br>
+We can use the if JavaScript operator to decide which component to render.</p>
+
+<p>Try changing the isGoal attribute to true:<br>Now, we'll create another component that chooses which component to render based on a condition:<br><br>
+Try changing the isGoal attribute to False:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h4>Logical && Operator</h4>
+<p>Another way to conditionally render a React component is by using the && operator.</p>
+
+
+<p>We can embed JavaScript expressions in JSX by using curly braces:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h4>Ternary Operator</h4>
+<p>Another way to conditionally render elements is by using a ternary operator.<br>
+condition ? true : false<br><br>
+Return the MadeGoal component if isGoal is true, otherwise return the MissedGoal component:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+
+<h2>React Lists</h2>
+<p>In React, you will render lists with some type of loop.<br>
+The JavaScript map() array method is generally the preferred method.<br>
+If you need a refresher on the map() method, check out the ES6 section.</p>
+
+<p>Let's render all of the cars from our garage:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+<p>When you run this code in your create-react-app, it will work but you will receive a warning that there is no "key" provided for the list items.</p>
+
+<h5>Keys</h5>
+<p>Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.<br>
+Keys need to be unique to each sibling. But they can be duplicated globally.<br>
+Generally, the key should be a unique ID assigned to each item. As a last resort, you can use the array index as a key.</p>
+<p>Let's refactor our previous example to include keys:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<h2>React Forms</h2>
+<p>Just like in HTML, React uses forms to allow users to interact with the web page.<br>
+Adding Forms in React<br>
+You add a form with React like any other element:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+<p>This will work as normal, the form will submit and the page will refresh.<br>
+But this is generally not what we want to happen in React.<br>
+We want to prevent this default behavior and let React control the form.</p>
+
+<h4>Handling Forms</h4>
+<p>Handling forms is about how you handle the data when it changes value or gets submitted.<br><br>
+In HTML, form data is usually handled by the DOM.<br><br>
+In React, form data is usually handled by the components.<br><br>
+When the data is handled by the components, all the data is stored in the component state.<br><br>
+You can control changes by adding event handlers in the onChange attribute.<br><br>
+We can use the useState Hook to keep track of each inputs value and provide a "single source of truth" for the entire application.<br><br>
+See the React Hooks section for more information on Hooks.<br>
+Use the onChange Hook to manage the input:</p>
+<strong>Go To Index.js and Execute in React App</strong>
+
+
+
+<h4>Submitting Forms</h4>
+<p>You can control the submit action by adding an event handler in the onSubmit attribute for the < form>:</p>
+<p>Add a submit button and an event handler in the onSubmit attribute:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Multiple Input Fields<br>
+You can control the values of more than one input field by adding a name attribute to each element.<br>
+We will initialize our state with an empty object.<br>
+To access the fields in the event handler use the event.target.name and event.target.value syntax.<br>
+To update the state, use square brackets [bracket notation] around the property name.</p>
+
+<p>Write a form with two input fields:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Note: We use the same event handler function for both input fields, we could write one event handler for each, but this gives us much cleaner code and is the preferred way in React.</p>
+
+<h5>Textarea</h5>
+<p>The textarea element in React is slightly different from ordinary HTML.<br>
+In HTML the value of a textarea was the text between the start tag < textarea> and the end tag < /textarea>.
+</p>
+<p>In React the value of a textarea is placed in a value attribute. We'll use the useState Hook to mange the value of the textarea:</p>
+
+<p>A simple textarea with some content:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>Select<br><br>
+A drop down list, or a select box, in React is also a bit different from HTML.<br>
+in HTML, the selected value in the drop down list was defined with the selected attribute.</p>
+<p>In React, the selected value is defined with a value attribute on the select tag:</p>
+<p>A simple select box, where the selected value "Volvo" is initialized in the constructor:</p>
+
+<strong>Go To Index.js and Execute in React App</strong>
+
+<p>By making these slight changes to < textarea> and < select>, React is able to handle all input elements in the same way.</p>
+
+<h5>Folder Structure</h5>
+<p>To create an application with multiple page routes, let's first start with the file structure.<br>
+Within the src folder, we'll create a folder named pages with several files:<br><br>
+src\pages\:<br>
+Home.js<br>
+Blogs.js<br>
+Contact.js<br><br>
+Each file will contain a very basic React component:<br></p>
+<img src="rootrouter.png">
+<img src="rootrouter1.png">
+<p>Example Explained<br><br>
+We wrap our content first with < Router>.<br>
+< Link> is used to set the URL and keep track of browsing history.<br><br>
+Anytime we link to an internal path, we will use < Link> instead of < a href="">.<br><br>
+< Switch> is similar to a JavaScript switch statement. It will conditionally render the < Route> that matches the < Link> path.</p>
+
+
+<a href="https://www.geeksforgeeks.org/introduction-to-es6/"><h1>What is ES ? </h1></a>
+<p>ES is an abbreviation used for ECMA Script. It is a standard for different scripting languages such as JS (JavaScript) made by ECMA. <br>
+  ECMA is an abbreviation used for European Computer Manufacturers Association. It is a standard organization based out of Switzerland which takes care of ES. ES11 (2020) is updated in June 2020 and its nomenclature is like that the year in which the update is released then the name will be a year plus one such as ES10 (2019). <br>
+  In ECMA Script6 also called ES6 and ECMAScript 2015 various new features were added:<br>
+  The features are listed below:<br>
+      The let keyword<br>
+      The const keyword<br>
+      Arrow functions<br>
+      Classes<br>
+      Modules<br>
+      The Rest Parameters<br>
+      The Spread Operator<br>
+      Destructuring Assignment<br>
+      The Object Destructuring Assignment<br>
+      Default values for Function Parameters<br>
+      Template Literals<br>
+      The for…of Loop<br>
+</p>
+<a href="https://www.geeksforgeeks.org/reactjs-using-babel/?ref=lbp"><h1>What is Babel ?</h1></a>
+<p>It is a term which you will listen to many times but will find it difficult to understand. I will tell you only the overview of this because manually you will not indulge in Babel but automatically things will take place by Babel. <br>
+Babel is a free and open-source JavaScript Transcompiler that is mainly used to convert ES6 (2015) and above code into a backward compatible code that can be run by older JS engines. Babel deploys a technique called Polyfill which basically means to fill many areas.</p>
+<a href="https://www.geeksforgeeks.org/node-js-npm-node-package-manager/"><h1>Node.js | NPM</h1></a>
+<a href="https://www.geeksforgeeks.org/reactjs-reactdom/"><h1>ReactDOM | ReactJS</h1></a>
+
+<p><h3>render() Function :</h3>
+This is one of the most important methods of ReactDOM. This function is used to render a single React Component or several Components wrapped together in a Component or a div element. This function uses the efficient methods of React for updating the DOM by being able to change only a subtree, efficient diff methods, etc. <br><br>
+Syntax: <br><br>
+<strong> ReactDOM.render(element, container, callback)</strong><br><br>
+Parameters: This method can take a maximum of three parameters as described below.  <br><br>
+    element: This parameter expects a JSX expression or a React Element to be rendered.<br>
+    container: This parameter expects the container in which the element has to be rendered.<br>
+    callback: This is an optional parameter that expects a function that is to be executed once the render is complete.<br><br>
+Return Type: This function returns a reference to the component or null if a stateless component was rendered. </p>
+
+<a href="https://www.geeksforgeeks.org/reactjs-virtual-dom/"><h1>React Virtual DOM</h1></a>
+
+
+<img src="props vs state.png" width="750px" >
+<img src="setState.png" width="750px" >
+<img src="indexAskey.png" width="850px" >
+<img src="lifecycle methods def.png" width="750px" >
+<img src="lifecycle methods.png" width="750px">
+<img src="constructorprops.png" width='750px' >
+<img src="staticgetderived.png" width="750px" >
+<img src="rendermethod.png" width="750px">
+<img src="componentDidmount.png" width="750px">
+<img src="updatestaticgetderived.png" width="750px">
+<img src="shouldcomponentupdate.png" width="750px">
+<img src="updaterender.png" width="750px">
+<img src="getsnapshotbeforeupdate.png" width="750px">
+<img src="componentdidupdate.png" width="750px">
+
+<h1>React Fragment</h1>
+<p>React Fragment can accept keys for an array,<br> but Empty Fragment can't accept keys for an array</p>
+
+<img src="purecomp.png" width="750px">
+<img src="shallowcomparision.png" width="750px">
+<img src="purecomp1.png" width="750px">
+<img src="purecomp2.png" width="750px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="ReactES6.jsx"></script>
+</body>
+</html> 
